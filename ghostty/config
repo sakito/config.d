@@ -1,7 +1,7 @@
 shell-integration = zsh
 theme = catppuccin-mocha
 
-font-family = "UDEV Gothic NFLG"
+font-family = "UDEV Gothic NF"
 
 window-padding-x = 20
 window-padding-y = 5
@@ -20,11 +20,17 @@ background-opacity = 0.75
 
 selection-invert-fg-bg = true
 
-cursor-style = bar
+#cursor-style = bar
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
+cursor-color = ffc0cb
+cursor-text = 302b5d
 
 scrollback-limit = 100000
 
 keybind = ctrl+j=ignore
+keybind = ctrl+m=text:\x0d
 keybind = ctrl+p=unbind
 keybind = ctrl+n=unbind
 
