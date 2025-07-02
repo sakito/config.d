@@ -19,7 +19,7 @@ set encoding=utf-8
 set fileencodings=utf-8
 
 " 読み込み文字コード
-set fileencodings=utf-8,cp932,sjis,euc-jp
+set fileencodings=utf-8,cp932,sjis,euc-jp,latin1
 
 " 改行コード
 " 自分はwinでもwls利用しているため全環境でLF優先
