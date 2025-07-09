@@ -3,12 +3,15 @@ theme = catppuccin-mocha
 
 font-family = "UDEV Gothic NF"
 
+# リガチャoff
+font-feature = "-dlig"
+
 window-padding-x = 20
 window-padding-y = 5
 window-padding-balance = true
 
 font-size = 20
-window-inherit-font-size = true
+#window-inherit-font-size = true
 
 font-thicken = true
 
@@ -29,10 +32,7 @@ cursor-text = 302b5d
 
 scrollback-limit = 100000
 
-keybind = ctrl+j=ignore
 keybind = ctrl+m=text:\x0d
-keybind = ctrl+p=unbind
-keybind = ctrl+n=unbind
 
 macos-titlebar-style = transparent
 macos-icon = custom-style
