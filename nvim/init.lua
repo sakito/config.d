@@ -3,15 +3,13 @@ if vim.loader then
   vim.loader.enable()
 end
 
--- 起動時cd
-vim.cmd([[autocmd VimEnter * cd ~]])
+-- mapleader
+-- lazyより先に呼ぶ必要がある
+vim.g.mapleader = ','
+vim.g.maplocalleader = '\\'
 
--- vim基本設定
-vim.cmd([[syntax enable]])
-vim.cmd([[filetype plugin indent on]])
+-- load
+require("lazy_vim")
+require("option").setup()
+require("key").setup()
 
--- denops
-local denops = vim.fn.expand(
-  vim.fs.joinpath(vim.fn.stdpath("cache"),
-                  "dpp/repos/github.com/vim-denops/denops.vim"))
-vim.opt.runtimepath:prepend(denops)
