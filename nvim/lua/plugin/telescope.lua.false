@@ -13,7 +13,7 @@ return {
       "nvim-lua/plenary.nvim"
     },
     config = function()
-      require("hook.telescope")
+      require("config.telescope")
     end,
 
     enabled = false,

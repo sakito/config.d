@@ -1,0 +1,11 @@
+return {
+  "b0o/incline.nvim",
+
+  enabled = false,
+
+  config = function()
+    require("config.incline")
+  end,
+  lazy = true,
+  event = "VeryLazy",
+}

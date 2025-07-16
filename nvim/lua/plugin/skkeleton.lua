@@ -6,7 +6,7 @@ return {
     --lazy = true,
     --event= {"InsertEnter"},
     config = function()
-      require("hook.skkeleton").setup()
+      require("config.skkeleton").setup()
     end,
   },
 
@@ -17,8 +17,7 @@ return {
       "vim-skk/skkeleton",
     },
     config = function()
-      require("hook.skkeleton_indicator").setup()
+      require("config.skkeleton_indicator").setup()
     end,
   },
-
 }

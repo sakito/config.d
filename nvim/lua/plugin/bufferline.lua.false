@@ -1,9 +1,12 @@
 return {
   "akinsho/bufferline.nvim",
+
+  enabled = false,
+
   dependencies = {
-    'nvim-tree/nvim-web-devicons',
+    "nvim-tree/nvim-web-devicons",
   },
   config = function()
-    require("hook.bufferline")
+    require("config.bufferline")
   end,
 }

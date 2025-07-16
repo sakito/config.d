@@ -1,17 +1,14 @@
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
-vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+local builtin = require("telescope.builtin")
+vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
+vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })
+vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
+vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
 
-vim.keymap.set('n', '<Leader>fx', builtin.commands, { desc = '[C]ommands' })
-vim.keymap.set('n', '<Leader>fs', builtin.builtin, { desc = 'List Telescope Bultin' })
-vim.keymap.set('n', '<Leader>/', builtin.current_buffer_fuzzy_find,
-               { desc = '[/] Fuzzily search in current buffer]' })
+vim.keymap.set("n", "<Leader>fx", builtin.commands, { desc = "[C]ommands" })
+vim.keymap.set("n", "<Leader>fs", builtin.builtin, { desc = "List Telescope Bultin" })
+vim.keymap.set("n", "<Leader>/", builtin.current_buffer_fuzzy_find, { desc = "[/] Fuzzily search in current buffer]" })
 
-
-
-require('telescope').setup {
+require("telescope").setup({
   defaults = {
     file_ignore_patterns = {
       -- 検索除外
@@ -61,7 +58,7 @@ require('telescope').setup {
       override_generic_sorter = true,
       override_file_sorter = true,
       case_mode = "smart_case",
-    }
-  }
-}
-require('telescope').load_extension('fzf')
+    },
+  },
+})
+require("telescope").load_extension("fzf")

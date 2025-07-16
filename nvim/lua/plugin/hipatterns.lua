@@ -1,9 +1,9 @@
 return {
-  "mvllow/modes.nvim",
-  tag = "v0.3.0",
+  "echasnovski/mini.hipatterns",
+  version = "*",
   lazy = true,
   event = { "BufRead", "CursorHold" },
   config = function()
-    require("config.modes")
+    require("config.hipatterns")
   end,
 }
