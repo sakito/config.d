@@ -16,7 +16,6 @@ function M.map()
   -- 全体用
 
   local map = function(mode, lhs, rhs, opts)
-
     opts = opts or { silent = true }
 
     -- デフォルト noremap: true, silent: false, buffer: false

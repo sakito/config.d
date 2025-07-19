@@ -64,7 +64,8 @@ function M.setup()
   map("v", "<S-Tab>", "<gv")
 
   -- select
-  map("x", "r", "<c-v>")
+  -- 矩形選択モード
+  map({ "n", "x" }, "r", "<c-v>")
 
   -- redraw
   map("n", "<c-l>", "<cmd>redraw!<cr>")
@@ -90,8 +91,8 @@ function M.setup()
   -- c-n、c-p は ddc の方で設定しているのでここではoff
   --map("i", "<c-n>", "<Down>")
   --map("i", "<c-p>", "<Up>")
-  map({"i", "n"}, "<c-f>", "<Right>")
-  map({"i", "n"}, "<c-b>", "<Left>")
+  map({ "i", "n" }, "<c-f>", "<Right>")
+  map({ "i", "n" }, "<c-b>", "<Left>")
 
   map("i", "<c-a>", "<Home>")
   map("i", "<c-e>", "<End>")

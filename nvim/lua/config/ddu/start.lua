@@ -19,12 +19,6 @@ function M.setup()
   map("n", ";h", function()
     return ddu.start({ name = "help-ff" })
   end)
-
-  require("config/ddu/filer").setup()
-
-  map("n", ";o", function()
-    return ddu.start({ name = "lsp:definition_all" })
-  end)
 end
 
 return M

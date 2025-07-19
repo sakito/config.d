@@ -31,5 +31,5 @@ configs.setup({
     enable = true,
     default_fallback = "auto",
     disable = { "python", "c", "cpp" },
-  }
+  },
 })

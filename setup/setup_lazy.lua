@@ -10,15 +10,16 @@ local cache_dir = joinpath(vim.fn.stdpath("cache"), "lazy")
 local targets = {
   {
     host = "github.com",
-    path = "folke/lazy.nvim",
+    user = "folke",
+    name ="lazy.nvim",
     branch = "v11.17.1",
   },
 }
 
 -- git clone
 for idx, target in pairs(targets) do
-  local target_path = joinpath(cache_dir, "repos", target.path)
-  local target_url = "https://" .. target.host .. "/" .. target.path
+  local target_path = joinpath(cache_dir, "repos", target.name)
+  local target_url = "https://" .. target.host .. "/" .. target.user .. "/" .. target.name
 
   print(target_path)
   print(target_url)

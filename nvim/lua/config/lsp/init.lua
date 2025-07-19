@@ -1,14 +1,3 @@
-local servers = {
-  -- lua
-  "lua_ls",
-
-  -- TS(Deno)
-  "denols",
-
-  -- Python
-  "pyright",
-}
-
 vim.lsp.config("*", {
   capabilities = require("ddc_source_lsp").make_client_capabilities(),
 })
@@ -24,6 +13,19 @@ vim.diagnostic.config({
   severity_sort = true,
 })
 
-vim.lsp.enable(servers)
+-- lsp の設定
 
-require("config.lsp.lua_ls")
+-- lua
+if vim.fn.executable("lua-language-server") == 1 then
+  require("config.lsp.lua_ls")
+end
+
+-- TS(Deno)
+if vim.fn.executable("deno") == 1 then
+  vim.lsp.enable("denols")
+end
+
+-- Python
+if vim.fn.executable("pyright") == 1 then
+  vim.lsp.enable("pyright")
+end

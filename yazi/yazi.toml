@@ -1,7 +1,7 @@
 "$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
 
 [mgr]
-ratio = [0, 7, 3]
+ratio = [0, 4, 4]
 sort_dir_first = true
 show_hidden = true
 show_symlink = false

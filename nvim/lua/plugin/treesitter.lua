@@ -14,5 +14,5 @@ return {
     lazy = true,
     event = { "BufRead", "CursorHold" },
     requires = "nvim-treesitter/nvim-treesitter",
-  }
+  },
 }

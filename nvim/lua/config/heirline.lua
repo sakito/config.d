@@ -158,7 +158,7 @@ local ViMode = {
   },
   provider = function(self)
     local mode_name = self.mode_names[vim.fn.mode(1)] and self.mode_names[vim.fn.mode(1)] or "NORMAL"
-    return " %1(" .. mode_name .. "%)"
+    return " %2(" .. mode_name .. "%)"
   end,
   hl = function(self)
     local color = self:mode_color() -- here!

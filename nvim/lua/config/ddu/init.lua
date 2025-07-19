@@ -11,6 +11,8 @@ function M.setup()
   require("config.ddu.ff").setup()
   require("config.ddu.dummy").setup()
   require("config.ddu.start").setup()
+  require("config.ddu.filer").setup()
+  require("config.ddu.lsp").setup()
 end
 
 return M

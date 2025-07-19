@@ -1,7 +1,9 @@
 -- 自作 snippet の場所指定
 local dir = vim.fn.stdpath("config") .. "/snippet/"
 for name, _ in vim.fs.dir(dir) do
-  vim.fn["denippet#load"](dir .. name)
+  if not vim.startswith(name, ".") then
+    vim.fn["denippet#load"](dir .. name)
+  end
 end
 
 -- friendly-snippets の読み込み設定
@@ -13,21 +15,9 @@ local ignore = {
   "markdown.json",
 }
 
-local function is_target(target)
-  local flag = true
-  for name in vim.iter(ignore) do
-    if target == name then
-      flag = false
-      break
-    end
-  end
-  return flag
-end
-
-
 for name_l1, type_l1 in vim.fs.dir(root) do
   if type_l1 == "file" then
-    if is_target(name_l1) then
+    if vim.tbl_contains({ name_l1 }, ignore) then
       vim.fn["denippet#load"](vim.fs.joinpath(root, name_l1))
     end
   elseif type_l1 == "directory" then
@@ -39,7 +29,6 @@ for name_l1, type_l1 in vim.fs.dir(root) do
     end
   end
 end
-
 
 local map = require("helper.keymap").map()
 

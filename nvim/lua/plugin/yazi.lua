@@ -1,27 +1,12 @@
 return {
   "mikavilpas/yazi.nvim",
   tag = "v11.6.0",
-  enabled = false,
 
   dependencies = {
     { "nvim-lua/plenary.nvim", lazy = true },
   },
   lazy = true,
   event = { "VeryLazy" },
-  keys = {
-    {
-      ";f",
-      mode = { "n", "v" },
-      "<cmd>Yazi<cr>",
-      desc = "Open yazi at the current file",
-    },
-    {
-      "<leader>f",
-      mode = { "n", "v" },
-      "<cmd>Yazi<cr>",
-      desc = "Open yazi at the current file",
-    }
-  },
   opts = {
     open_for_directories = false,
 

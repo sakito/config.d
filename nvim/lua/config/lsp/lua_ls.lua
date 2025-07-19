@@ -1,6 +1,4 @@
 vim.lsp.config("lua_ls", {
-  cmd = { "lua-language-server" },
-  filetypes = { "lua" },
   on_init = function(client)
     if client.workspace_folders then
       local path = client.workspace_folders[1].name
@@ -25,9 +23,11 @@ vim.lsp.config("lua_ls", {
   settings = {
     Lua = {
       diagnostics = {
-        -- 未使用変数は冒頭に`_`をつけていれば警告なし
+        -- 未使用変数の先頭が `_` の場合無視
         unusedLocalExclude = { "_*" },
       },
     },
   },
 })
+
+vim.lsp.enable("lua_ls")

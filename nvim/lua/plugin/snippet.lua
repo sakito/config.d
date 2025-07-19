@@ -11,5 +11,5 @@ return {
   },
   {
     "rafamadriz/friendly-snippets",
-  }
+  },
 }

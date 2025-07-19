@@ -10,4 +10,9 @@ return {
       require("config.gin")
     end,
   },
+  {
+    "sindrets/diffview.nvim",
+    lazy = true,
+    event = { "BufRead", "CursorHold" },
+  },
 }

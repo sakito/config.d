@@ -71,15 +71,14 @@ function M.setup()
   vim.o.autoindent = true
 
   -- indent例外
-  vim.api.nvim_create_augroup( 'indent', {} )
-  vim.api.nvim_create_autocmd( 'FileType', {
+  vim.api.nvim_create_augroup("indent", {})
+  vim.api.nvim_create_autocmd("FileType", {
     group = "indent",
     pattern = "go",
     callback = function()
       vim.cmd([[ set noexpandtab tabstop=2 ]])
-    end
+    end,
   })
-
 
   --# 特殊文字関連
 
