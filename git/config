@@ -1,0 +1,32 @@
+[user]
+    name = sakito
+    email = sakito@sakito.com
+[color]
+    ui = true
+[core]
+    quotepath = false
+    pager = delta
+[init]
+    defaultBranch = main
+[merge]
+    ff = false
+    conflictstyle = zdiff3
+[interactive]
+  diffFilter = delta --color-only
+[pull]
+    ff = only
+[delta]
+  navigate = true
+  dark = true
+[alias]
+    st = status -s
+    co = checkout
+    ci = commit
+    b = branch --no-merged
+    get = !ghq get -p
+    list = !ghq list
+
+# global な gitignore は $HOME/.config/git/ignore に配置
+
+[ghq]
+    root = ~/src

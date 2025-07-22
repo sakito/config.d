@@ -32,6 +32,9 @@ cursor-text = 302b5d
 
 scrollback-limit = 100000
 
+keybind = clear
+keybind = ctrl+shift+comma=reload_config
+
 keybind = ctrl+m=text:\x0d
 
 macos-titlebar-style = transparent

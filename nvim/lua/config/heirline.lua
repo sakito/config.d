@@ -182,7 +182,7 @@ local SkkMode = {
       [""] = "＠",
       hira = "あ",
       kata = "ア",
-      hankata = "ｱｨ",
+      hankata = "ｱｲ",
       zenkaku = "Ａ",
       abbrev = "※",
     },
