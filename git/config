@@ -23,6 +23,7 @@
     co = checkout
     ci = commit
     b = branch --no-merged
+    id = show -s --format=%H
     get = !ghq get -p
     list = !ghq list
 
